@@ -1,0 +1,51 @@
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: argo-cd-ingressroute
+  namespace: argo-cd
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`argo.cloud.docholag.site`) && PathPrefix(`/`)
+      kind: Rule
+      services:
+        - name: argocd-server
+          port: 80
+  tls:
+    secretName: wildcard-tls
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: model-serving-ingress
+  namespace: model-serving
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`fraud.cloud.docholag.site`) && PathPrefix(`/`)
+      kind: Rule
+      services:
+        - name: fraud-detection
+          port: 8000
+  tls:
+    secretName: wildcard-tls
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: grafana-ingress
+  namespace: monitoring
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`grafana.cloud.docholag.site`)
+      kind: Rule
+      services:
+        - name: kube-prometheus-stack-grafana
+          port: 80
+  tls:
+    secretName: wildcard-tls
