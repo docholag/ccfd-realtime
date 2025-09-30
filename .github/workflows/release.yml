@@ -112,7 +112,8 @@ jobs:
                    .appVersion = \"${VERSION}\"" \
                    -i "$CHART_FILE"
 
-          yq eval ".image.repository = \"$IMAGE\" |
+          # Sửa cách update values.yaml
+          yq eval ".image.repository = \"docholag/fraud-detection\" |
                    .image.tag = \"${VERSION}\"" \
                    -i "$VALUE_FILE"
 
