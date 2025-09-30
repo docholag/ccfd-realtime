@@ -80,6 +80,8 @@ jobs:
     name: Update Helm Values
     needs: build-and-push
     runs-on: ubuntu-latest
+    permissions: # Thêm phần này
+      contents: write # Cho phép write vào repository
     env:
       CHART_FILE: deployments/helm-charts/fraud-detection/Chart.yaml
       VALUE_FILE: deployments/helm-charts/fraud-detection/values.yaml
