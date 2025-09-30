@@ -21,12 +21,6 @@ This repository contains a complete end-to-end system for real-time credit card 
   - [CI/CD Pipeline](#cicd-pipeline) - [Continuous Integration & Testing](#continuous-integration-testing) - [Continuous Deployment](#continuous-deployment)
   <!--toc:end-->
 
-## Demo Video
-
-Watch a brief overview and demo of the system in action:
-
-[![Demo](https://img.youtube.com/vi/SOBmdxpqs5E/0.jpg)](https://youtu.be/SOBmdxpqs5E)
-
 ## Repository Structure
 
 The repository is organized into distinct directories, each serving a specific purpose.
