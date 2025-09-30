@@ -1,7 +1,7 @@
 replicaCount: 2
 image:
   repository: "docholag/fraud-detection"
-  tag: "lastest"
+  tag: "latest"
   pullPolicy: IfNotPresent
 service:
   type: ClusterIP
