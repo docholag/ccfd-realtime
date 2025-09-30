@@ -105,15 +105,15 @@ jobs:
 
       - name: Update Chart.yaml & values.yaml with version
         run: |
-          VERSION="v${{ needs.build-and-push.outputs.version }}"
+          VERSION="${{ needs.build-and-push.outputs.version }}"
           IMAGE="${{ needs.build-and-push.outputs.image }}"
 
-          yq eval ".version = \"${VERSION#v}\" |
-                   .appVersion = \"${VERSION#v}\"" \
+          yq eval ".version = \"${VERSION}\" |
+                   .appVersion = \"${VERSION}\"" \
                    -i "$CHART_FILE"
 
           yq eval ".image.repository = \"$IMAGE\" |
-                   .image.tag = \"$VERSION\"" \
+                   .image.tag = \"${VERSION}\"" \
                    -i "$VALUE_FILE"
 
           git add "$CHART_FILE" "$VALUE_FILE"
