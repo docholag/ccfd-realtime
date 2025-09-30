@@ -1,7 +1,7 @@
 replicaCount: 2
 image:
-  repository: "docholag/fraud-detection"
-  tag: "latest"
+  repository: ""
+  tag: "v1.1.1"
   pullPolicy: IfNotPresent
 service:
   type: ClusterIP
@@ -20,7 +20,6 @@ resources:
   requests:
     cpu: 100m
     memory: 128Mi
-
 livenessProbe:
   enabled: true
   initialDelaySeconds: 15
