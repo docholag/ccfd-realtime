@@ -6,7 +6,7 @@ import uuid
 from datetime import datetime, timezone
 
 # Get the server URL from an environment variable, with a default for local testing
-API_URL = os.environ.get("API_URL", "http://localhost:8000/predict")
+API_URL = os.environ.get("API_URL", "https://fraud.cloud.docholag.site/predict")
 
 # --- Lists of IDs based on the API's rules ---
 BLOCKED_CUSTOMERS = [323, 1693, 4354, 4259, 3879, 3544, 2375]

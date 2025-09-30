@@ -3,7 +3,7 @@
   "name": "Main branch protection",
   "target": "branch",
   "source_type": "Repository",
-  "source": "phuchoang2603/realtime-credit-card-fraud-detection",
+  "source": "docholag/ccfd-realtime",
   "enforcement": "active",
   "conditions": {
     "ref_name": {
@@ -36,4 +36,3 @@
   ],
   "bypass_actors": []
 }
-
