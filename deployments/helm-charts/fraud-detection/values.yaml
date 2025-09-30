@@ -1,7 +1,7 @@
 replicaCount: 2
 image:
-  repository: "ghcr.io/phuchoang2603/realtime-credit-card-fraud-detection"
-  tag: "v1.1.0"
+  repository: "docholag/fraud-detection"
+  tag: "latest"
   pullPolicy: IfNotPresent
 service:
   type: ClusterIP
@@ -13,13 +13,13 @@ env:
   - name: OTEL_SERVICE_NAME
     value: "fraud-detection-api"
 # It's recommended to uncomment and adjust these for production deployments.
-resources: {}
-# limits:
-#   cpu: 200m
-#   memory: 256Mi
-# requests:
-#   cpu: 100m
-#   memory: 128Mi
+resources:
+  limits:
+    cpu: 200m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
 
 livenessProbe:
   enabled: true
