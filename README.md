@@ -2,7 +2,7 @@
 
 This repository contains a complete end-to-end system for real-time credit card fraud detection, including data analysis notebooks, a machine learning API, and infrastructure-as-code for cloud deployment. The system is designed with a modern, observable, and scalable architecture.
 
-![mlops1-arch](./deployments/images/mlops1-arch.excalidraw.svg)
+![mlops1-arch](./deployments/images/workflow.png)
 
 ## Repository Structure
 
