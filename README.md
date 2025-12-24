@@ -4,23 +4,6 @@ This repository contains a complete end-to-end system for real-time credit card 
 
 ![mlops1-arch](./deployments/images/mlops1-arch.excalidraw.svg)
 
-## Table of Contents
-
-<!--toc:start-->
-
-- [Scalable Real-Time Credit Card Fraud Detection System](#scalable-real-time-credit-card-fraud-detection-system)
-  - [Table of Contents](#table-of-contents)
-  - [Demo Video](#demo-video)
-  - [Repository Structure](#repository-structure)
-  - [System Architecture](#system-architecture)
-  - [Installation and Usage](#installation-and-usage)
-    - [Running the Notebooks](#running-the-notebooks)
-    - [Local Deployment with Docker Compose](#local-deployment-with-docker-compose)
-    - [Local Deployment with Kubernetes (on Proxmox)](#local-deployment-with-kubernetes-on-proxmox)
-    - [Cloud Deployment on GKE with Terraform & GitOps](#cloud-deployment-on-gke-with-terraform-gitops)
-  - [CI/CD Pipeline](#cicd-pipeline) - [Continuous Integration & Testing](#continuous-integration-testing) - [Continuous Deployment](#continuous-deployment)
-  <!--toc:end-->
-
 ## Repository Structure
 
 The repository is organized into distinct directories, each serving a specific purpose.
